@@ -1,0 +1,1367 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>孟若羽 - 影像档案与创作记录 | 独立视频品牌官网</title>
+<meta name="description" content="孟若羽官方网站，收录孟若羽原创影像作品、创作手记与企业动态，呈现一位创作者持续深耕真实生活的影像档案与内容生态。">
+<meta name="keywords" content="孟若羽,孟若羽作品,影像档案,原创视频,创作者,视频品牌官网">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f2a44'/%3E%3Ccircle cx='32' cy='30' r='13' fill='none' stroke='%23f2b544' stroke-width='4'/%3E%3Cpath d='M27 24l12 6-12 6z' fill='%23f2b544'/%3E%3Cpath d='M20 50h24' stroke='%234f6f9e' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --mry-ink:#1f2a44;
+    --mry-ink-soft:#3c4a68;
+    --mry-paper:#f7f5f0;
+    --mry-paper-alt:#efece4;
+    --mry-gold:#f2b544;
+    --mry-gold-deep:#c98a1c;
+    --mry-blue:#4f6f9e;
+    --mry-line:#ded8ca;
+    --mry-white:#fffdf9;
+    --mry-shadow:0 14px 34px rgba(31,42,68,.10);
+    --mry-radius:14px;
+    --mry-nav-h:64px;
+    --mry-announce-h:42px;
+    --mry-sticky:calc(var(--mry-nav-h) + var(--mry-announce-h));
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+    background:var(--mry-paper);
+    color:var(--mry-ink);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{margin:0;line-height:1.3;font-weight:700;letter-spacing:.5px;}
+  p{margin:0 0 1em;}
+  a{color:inherit;text-decoration:none;}
+  ul{margin:0;padding:0;list-style:none;}
+  img{display:block;max-width:100%;}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+  section{scroll-margin-top:calc(var(--mry-sticky) + 12px);}
+
+  .mry-container{width:min(1180px,92vw);margin:0 auto;}
+
+  /* ===== 吸顶公告条 ===== */
+  .mry-announce{
+    position:sticky;top:0;z-index:60;
+    height:var(--mry-announce-h);
+    background:linear-gradient(90deg,#1f2a44,#2f4a72 55%,#1f2a44);
+    color:#f4e9cf;
+    display:flex;align-items:center;
+    font-size:13.5px;
+  }
+  .mry-announce .mry-container{display:flex;align-items:center;gap:14px;overflow:hidden;}
+  .mry-announce-tag{
+    flex:none;background:var(--mry-gold);color:#2b1f05;font-weight:700;
+    font-size:11.5px;letter-spacing:1px;padding:2px 9px;border-radius:20px;
+  }
+  .mry-announce-track{
+    display:flex;gap:52px;white-space:nowrap;
+    animation:mry-marquee 26s linear infinite;
+  }
+  .mry-announce:hover .mry-announce-track{animation-play-state:paused;}
+  .mry-announce-track span{opacity:.9;}
+  .mry-announce-track b{color:var(--mry-gold);font-weight:600;}
+  @keyframes mry-marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+  /* ===== 页头 ===== */
+  .mry-header{
+    position:sticky;top:var(--mry-announce-h);z-index:55;
+    height:var(--mry-nav-h);
+    background:rgba(247,245,240,.94);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--mry-line);
+  }
+  .mry-header .mry-container{display:flex;align-items:center;gap:22px;height:100%;}
+  .mry-logo{display:flex;align-items:center;gap:10px;flex:none;}
+  .mry-logo-mark{
+    width:34px;height:34px;border-radius:9px;flex:none;
+    background:radial-gradient(circle at 30% 25%,#4f6f9e,#1f2a44 70%);
+    display:grid;place-items:center;color:var(--mry-gold);font-size:17px;font-weight:700;
+    box-shadow:inset 0 0 0 1px rgba(242,181,68,.5);
+  }
+  .mry-logo-text b{display:block;font-size:16px;letter-spacing:2px;}
+  .mry-logo-text small{display:block;font-size:10.5px;color:var(--mry-blue);letter-spacing:2.4px;}
+  .mry-nav{display:flex;gap:4px;margin-left:8px;flex-wrap:wrap;}
+  .mry-nav a{
+    font-size:14px;padding:7px 11px;border-radius:8px;color:var(--mry-ink-soft);
+    transition:.22s;white-space:nowrap;
+  }
+  .mry-nav a:hover,.mry-nav a.mry-active{background:var(--mry-paper-alt);color:var(--mry-ink);font-weight:600;}
+  .mry-header-tools{margin-left:auto;display:flex;align-items:center;gap:10px;}
+  .mry-search{position:relative;display:flex;align-items:center;}
+  .mry-search input{
+    width:170px;height:36px;border-radius:20px;border:1px solid var(--mry-line);
+    background:var(--mry-white);padding:0 36px 0 14px;font-size:13px;color:var(--mry-ink);
+    outline:none;transition:.25s;
+  }
+  .mry-search input:focus{width:210px;border-color:var(--mry-gold);box-shadow:0 0 0 3px rgba(242,181,68,.18);}
+  .mry-search button{
+    position:absolute;right:4px;width:28px;height:28px;border-radius:50%;
+    display:grid;place-items:center;color:var(--mry-blue);font-size:14px;
+  }
+  .mry-search button:hover{background:var(--mry-paper-alt);}
+  .mry-search-feedback{
+    position:absolute;top:44px;right:0;width:250px;background:var(--mry-white);
+    border:1px solid var(--mry-line);border-radius:10px;box-shadow:var(--mry-shadow);
+    padding:10px 12px;font-size:12.5px;color:var(--mry-ink-soft);display:none;z-index:70;
+  }
+  .mry-search-feedback.mry-show{display:block;}
+  .mry-burger{display:none;width:38px;height:38px;border-radius:9px;background:var(--mry-paper-alt);place-items:center;font-size:17px;}
+
+  /* ===== 按钮 ===== */
+  .mry-btn{
+    display:inline-flex;align-items:center;gap:7px;padding:11px 22px;border-radius:30px;
+    font-size:14px;font-weight:600;transition:.24s;
+  }
+  .mry-btn-primary{background:var(--mry-ink);color:#fdf7e8;box-shadow:0 8px 20px rgba(31,42,68,.22);}
+  .mry-btn-primary:hover{background:#2c3c5e;transform:translateY(-2px);}
+  .mry-btn-gold{background:var(--mry-gold);color:#2b1f05;}
+  .mry-btn-gold:hover{background:#f7c463;transform:translateY(-2px);}
+  .mry-btn-ghost{border:1px solid var(--mry-line);color:var(--mry-ink-soft);background:var(--mry-white);}
+  .mry-btn-ghost:hover{border-color:var(--mry-blue);color:var(--mry-ink);}
+
+  /* ===== 首屏 ===== */
+  .mry-hero{position:relative;padding:56px 0 62px;overflow:hidden;}
+  .mry-hero::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(620px 380px at 88% 8%,rgba(79,111,158,.14),transparent 70%),
+      radial-gradient(500px 340px at 6% 88%,rgba(242,181,68,.16),transparent 72%);
+    pointer-events:none;
+  }
+  .mry-hero-grid{position:relative;display:grid;grid-template-columns:6fr 5fr;gap:48px;align-items:center;}
+  .mry-eyebrow{
+    display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:2px;
+    color:var(--mry-gold-deep);font-weight:700;margin-bottom:16px;text-transform:uppercase;
+  }
+  .mry-eyebrow::before{content:"";width:26px;height:2px;background:var(--mry-gold);}
+  .mry-hero h1{font-size:clamp(38px,5.2vw,62px);letter-spacing:4px;line-height:1.12;}
+  .mry-hero h1 span{color:var(--mry-blue);}
+  .mry-hero-lead{font-size:17px;color:var(--mry-ink-soft);margin-top:18px;max-width:34em;}
+  .mry-hero-intro{
+    margin-top:18px;font-size:14.5px;color:var(--mry-ink-soft);
+    background:rgba(255,253,249,.72);border-left:3px solid var(--mry-gold);
+    padding:14px 18px;border-radius:0 10px 10px 0;max-width:38em;
+  }
+  .mry-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px;}
+  .mry-hero-stats{display:flex;gap:34px;margin-top:34px;flex-wrap:wrap;}
+  .mry-hero-stats div b{display:block;font-size:26px;letter-spacing:1px;color:var(--mry-ink);}
+  .mry-hero-stats div small{display:block;font-size:12.5px;color:var(--mry-ink-soft);letter-spacing:1px;}
+  .mry-hero-visual{position:relative;}
+  .mry-hero-frame{
+    position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--mry-shadow);
+    border:1px solid rgba(31,42,68,.08);background:#e6e2d8;
+  }
+  .mry-hero-frame img{width:100%;height:auto;aspect-ratio:16/11;object-fit:cover;}
+  .mry-hero-badge{
+    position:absolute;left:16px;bottom:16px;z-index:3;
+    background:rgba(31,42,68,.82);color:#fdf3dc;font-size:12.5px;letter-spacing:1px;
+    padding:6px 14px;border-radius:20px;display:flex;align-items:center;gap:7px;backdrop-filter:blur(4px);
+  }
+  .mry-hero-badge i{width:7px;height:7px;border-radius:50%;background:var(--mry-gold);display:inline-block;}
+  .mry-hero-float{
+    position:absolute;right:-14px;bottom:-22px;background:var(--mry-white);
+    border:1px solid var(--mry-line);border-radius:14px;padding:14px 18px;
+    box-shadow:var(--mry-shadow);font-size:13px;width:190px;
+  }
+  .mry-hero-float b{display:block;font-size:13.5px;margin-bottom:4px;}
+  .mry-hero-float span{color:var(--mry-ink-soft);font-size:12px;}
+
+  /* ===== 章节通用 ===== */
+  .mry-section{padding:64px 0;}
+  .mry-section-alt{background:var(--mry-paper-alt);}
+  .mry-section-head{margin-bottom:36px;max-width:760px;}
+  .mry-section-head .mry-eyebrow{margin-bottom:12px;}
+  .mry-section-head h2{font-size:clamp(24px,3vw,32px);letter-spacing:2px;}
+  .mry-section-head p{color:var(--mry-ink-soft);font-size:14.5px;margin-top:12px;margin-bottom:0;}
+  .mry-divider{height:1px;background:var(--mry-line);border:none;margin:0;}
+
+  /* ===== 深度解析 ===== */
+  .mry-about-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:46px;align-items:start;}
+  .mry-about-body p{font-size:15px;color:var(--mry-ink-soft);text-indent:2em;}
+  .mry-about-body h3{
+    font-size:18px;margin:30px 0 12px;padding-left:14px;position:relative;letter-spacing:1px;
+  }
+  .mry-about-body h3::before{
+    content:"";position:absolute;left:0;top:4px;bottom:4px;width:4px;border-radius:3px;
+    background:linear-gradient(180deg,var(--mry-gold),var(--mry-blue));
+  }
+  .mry-about-side{
+    background:var(--mry-white);border:1px solid var(--mry-line);border-radius:var(--mry-radius);
+    padding:24px;box-shadow:var(--mry-shadow);position:sticky;top:calc(var(--mry-sticky) + 20px);
+  }
+  .mry-about-side h3{font-size:16px;margin-bottom:14px;letter-spacing:1px;}
+  .mry-about-side li{
+    display:flex;justify-content:space-between;gap:12px;font-size:13.5px;
+    padding:9px 0;border-bottom:1px dashed var(--mry-line);color:var(--mry-ink-soft);
+  }
+  .mry-about-side li:last-child{border-bottom:none;}
+  .mry-about-side li b{color:var(--mry-ink);font-weight:600;}
+  .mry-about-side .mry-side-note{font-size:12.5px;color:var(--mry-ink-soft);margin-top:14px;margin-bottom:0;}
+
+  /* ===== 焦点内容 ===== */
+  .mry-feature-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:26px;}
+  .mry-feature-main{
+    background:var(--mry-white);border:1px solid var(--mry-line);border-radius:var(--mry-radius);
+    overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--mry-shadow);
+  }
+  .mry-cover{position:relative;overflow:hidden;background:#dcd6c8;}
+  .mry-cover img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+  .mry-cover::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(31,42,68,0) 45%,rgba(31,42,68,.55));
+  }
+  .mry-card:hover .mry-cover img,.mry-feature-main:hover .mry-cover img{transform:scale(1.045);}
+  .mry-cover-tag{
+    position:absolute;left:12px;top:12px;z-index:2;background:rgba(31,42,68,.85);color:#f7e6bd;
+    font-size:11.5px;padding:3px 10px;border-radius:20px;letter-spacing:1px;
+  }
+  .mry-cover-play{
+    position:absolute;inset:0;display:grid;place-items:center;z-index:2;
+  }
+  .mry-cover-play span{
+    width:54px;height:54px;border-radius:50%;background:rgba(255,253,249,.9);
+    display:grid;place-items:center;color:var(--mry-ink);font-size:18px;
+    box-shadow:0 8px 22px rgba(0,0,0,.24);transition:.25s;
+  }
+  .mry-feature-main:hover .mry-cover-play span{transform:scale(1.1);background:var(--mry-gold);}
+  .mry-feature-main .mry-cover{aspect-ratio:16/9;}
+  .mry-feature-body{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1;}
+  .mry-feature-body h3{font-size:21px;margin-bottom:10px;}
+  .mry-feature-body p{font-size:14px;color:var(--mry-ink-soft);}
+  .mry-meta{
+    display:flex;align-items:center;gap:14px;font-size:12.5px;color:var(--mry-ink-soft);
+    flex-wrap:wrap;margin-top:auto;
+  }
+  .mry-meta .mry-author{display:flex;align-items:center;gap:7px;color:var(--mry-ink);font-weight:600;}
+  .mry-avatar{
+    width:26px;height:26px;border-radius:50%;display:grid;place-items:center;
+    font-size:11.5px;font-weight:700;color:#fff;flex:none;
+  }
+  .mry-feature-side{display:grid;gap:16px;align-content:start;}
+  .mry-mini-card{
+    display:grid;grid-template-columns:120px 1fr;gap:14px;
+    background:var(--mry-white);border:1px solid var(--mry-line);border-radius:12px;
+    overflow:hidden;transition:.25s;
+  }
+  .mry-mini-card:hover{transform:translateY(-3px);box-shadow:var(--mry-shadow);border-color:#cfc6b2;}
+  .mry-mini-card .mry-cover{aspect-ratio:16/9;border-radius:0;}
+  .mry-mini-card .mry-cover-play span{width:34px;height:34px;font-size:13px;}
+  .mry-mini-card-body{padding:12px 14px 12px 0;display:flex;flex-direction:column;gap:6px;}
+  .mry-mini-card-body h4{font-size:14.5px;line-height:1.4;}
+  .mry-mini-card-body small{font-size:12px;color:var(--mry-ink-soft);}
+
+  /* ===== 视频流 ===== */
+  .mry-video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .mry-card{
+    background:var(--mry-white);border:1px solid var(--mry-line);border-radius:var(--mry-radius);
+    overflow:hidden;display:flex;flex-direction:column;transition:.28s;
+  }
+  .mry-card:hover{transform:translateY(-5px);box-shadow:var(--mry-shadow);border-color:#d2c9b5;}
+  .mry-card .mry-cover{aspect-ratio:16/9;}
+  .mry-card-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:9px;flex:1;}
+  .mry-card-body h3{font-size:16.5px;line-height:1.45;}
+  .mry-card-body p{font-size:13.5px;color:var(--mry-ink-soft);margin:0;}
+  .mry-tags{display:flex;gap:6px;flex-wrap:wrap;}
+  .mry-tags span{
+    font-size:11.5px;padding:2px 9px;border-radius:20px;background:var(--mry-paper-alt);
+    color:var(--mry-ink-soft);
+  }
+  .mry-card-actions{
+    display:flex;align-items:center;gap:14px;margin-top:auto;
+    padding-top:10px;border-top:1px dashed var(--mry-line);font-size:12.5px;color:var(--mry-ink-soft);
+  }
+  .mry-act{display:inline-flex;align-items:center;gap:5px;transition:.2s;padding:2px 0;}
+  .mry-act:hover{color:var(--mry-gold-deep);}
+  .mry-act.mry-liked{color:#c9532b;font-weight:600;}
+  .mry-act.mry-saved{color:var(--mry-blue);font-weight:600;}
+
+  /* ===== 专题 ===== */
+  .mry-topic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .mry-topic{
+    position:relative;border-radius:var(--mry-radius);overflow:hidden;aspect-ratio:3/4;
+    background:#233;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;
+    padding:20px;transition:.3s;
+  }
+  .mry-topic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .mry-topic::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(20,26,40,.1) 20%,rgba(20,26,40,.86));
+  }
+  .mry-topic > *{position:relative;z-index:2;}
+  .mry-topic:hover{transform:translateY(-5px);}
+  .mry-topic small{
+    font-size:11px;letter-spacing:2px;color:var(--mry-gold);
+    background:rgba(242,181,68,.16);padding:2px 9px;border-radius:20px;align-self:flex-start;margin-bottom:8px;
+  }
+  .mry-topic h3{font-size:17px;line-height:1.4;margin-bottom:6px;}
+  .mry-topic p{font-size:12.5px;opacity:.82;margin:0;}
+
+  /* ===== 创作者 ===== */
+  .mry-creator-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .mry-creator{
+    background:var(--mry-white);border:1px solid var(--mry-line);border-radius:var(--mry-radius);
+    padding:22px 20px;text-align:center;transition:.26s;
+  }
+  .mry-creator:hover{transform:translateY(-4px);box-shadow:var(--mry-shadow);}
+  .mry-creator .mry-avatar{width:62px;height:62px;font-size:22px;margin:0 auto 12px;border-radius:20px;}
+  .mry-creator h3{font-size:16px;margin-bottom:4px;}
+  .mry-creator .mry-domain{font-size:12px;color:var(--mry-gold-deep);letter-spacing:1px;margin-bottom:10px;display:block;}
+  .mry-creator p{font-size:12.8px;color:var(--mry-ink-soft);min-height:60px;margin-bottom:12px;}
+  .mry-creator .mry-creator-stats{
+    display:flex;justify-content:center;gap:16px;font-size:12px;color:var(--mry-ink-soft);
+    border-top:1px dashed var(--mry-line);padding-top:10px;
+  }
+  .mry-creator .mry-creator-stats b{display:block;color:var(--mry-ink);font-size:14px;}
+
+  /* ===== 故事随笔 ===== */
+  .mry-story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .mry-story{
+    background:var(--mry-white);border:1px solid var(--mry-line);border-radius:var(--mry-radius);
+    padding:26px 24px;position:relative;
+  }
+  .mry-story::before{
+    content:"“";position:absolute;top:2px;right:20px;font-size:58px;color:var(--mry-gold);opacity:.32;
+    font-family:Georgia,serif;line-height:1;
+  }
+  .mry-story h3{font-size:16.5px;margin-bottom:10px;letter-spacing:.5px;}
+  .mry-story p{font-size:14px;color:var(--mry-ink-soft);margin:0;}
+  .mry-story .mry-story-by{font-size:12.5px;color:var(--mry-blue);margin-top:14px;display:block;}
+
+  /* ===== 评论 ===== */
+  .mry-comment-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .mry-comment{
+    background:var(--mry-white);border:1px solid var(--mry-line);border-radius:12px;
+    padding:18px 18px 16px;display:flex;gap:12px;
+  }
+  .mry-comment .mry-avatar{width:36px;height:36px;font-size:14px;border-radius:12px;}
+  .mry-comment-body h4{font-size:13.5px;margin-bottom:5px;}
+  .mry-comment-body p{font-size:13.5px;color:var(--mry-ink-soft);margin:0 0 8px;}
+  .mry-comment-body small{font-size:11.5px;color:#8d8878;}
+
+  /* ===== 动态与FAQ ===== */
+  .mry-dyn-faq{display:grid;grid-template-columns:1fr 1.15fr;gap:44px;align-items:start;}
+  .mry-timeline li{position:relative;padding-left:22px;padding-bottom:20px;}
+  .mry-timeline li::before{
+    content:"";position:absolute;left:0;top:7px;width:9px;height:9px;border-radius:50%;
+    background:var(--mry-gold);box-shadow:0 0 0 3px rgba(242,181,68,.22);
+  }
+  .mry-timeline li::after{
+    content:"";position:absolute;left:4px;top:20px;bottom:2px;width:1px;background:var(--mry-line);
+  }
+  .mry-timeline li:last-child::after{display:none;}
+  .mry-timeline time{display:block;font-size:12px;color:var(--mry-blue);letter-spacing:1px;}
+  .mry-timeline h4{font-size:14.5px;margin:3px 0 5px;}
+  .mry-timeline p{font-size:13px;color:var(--mry-ink-soft);margin:0;}
+  .mry-faq details{
+    background:var(--mry-white);border:1px solid var(--mry-line);border-radius:10px;
+    padding:14px 18px;margin-bottom:10px;transition:.22s;
+  }
+  .mry-faq details[open]{border-color:var(--mry-gold);box-shadow:0 6px 18px rgba(31,42,68,.07);}
+  .mry-faq summary{
+    cursor:pointer;font-size:14.5px;font-weight:600;list-style:none;display:flex;
+    justify-content:space-between;gap:12px;align-items:center;
+  }
+  .mry-faq summary::-webkit-details-marker{display:none;}
+  .mry-faq summary::after{content:"+";color:var(--mry-gold-deep);font-size:19px;line-height:1;transition:.2s;}
+  .mry-faq details[open] summary::after{content:"−";}
+  .mry-faq details p{font-size:13.5px;color:var(--mry-ink-soft);margin:10px 0 0;}
+
+  /* ===== 合作与联系 ===== */
+  .mry-partner-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:40px;}
+  .mry-partner{
+    flex:1 1 150px;background:var(--mry-white);border:1px dashed var(--mry-line);
+    border-radius:10px;padding:16px 18px;font-size:13.5px;color:var(--mry-ink-soft);
+    display:flex;align-items:center;gap:10px;transition:.22s;
+  }
+  .mry-partner:hover{border-style:solid;border-color:var(--mry-gold);color:var(--mry-ink);}
+  .mry-partner i{
+    width:8px;height:8px;border-radius:50%;background:var(--mry-blue);flex:none;
+  }
+  .mry-contact{
+    display:grid;grid-template-columns:1.2fr 1fr;gap:36px;
+    background:linear-gradient(120deg,#1f2a44,#2c3f61);
+    border-radius:20px;padding:40px;color:#f2eddf;box-shadow:var(--mry-shadow);
+  }
+  .mry-contact h2{font-size:24px;letter-spacing:2px;margin-bottom:12px;}
+  .mry-contact p{font-size:14px;opacity:.85;}
+  .mry-contact-list li{font-size:13.5px;padding:7px 0;opacity:.9;display:flex;gap:10px;}
+  .mry-contact-list li b{color:var(--mry-gold);font-weight:600;flex:none;}
+  .mry-contact-actions{display:flex;flex-direction:column;gap:12px;justify-content:center;}
+  .mry-contact-actions .mry-btn{justify-content:center;}
+  .mry-contact-actions .mry-btn-ghost{background:rgba(255,253,249,.1);border-color:rgba(255,253,249,.28);color:#f2eddf;}
+  .mry-contact-actions .mry-btn-ghost:hover{background:rgba(255,253,249,.18);color:#fff;}
+
+  /* ===== 页脚 ===== */
+  .mry-footer{background:#1a2336;color:#a8b2c6;padding:48px 0 26px;font-size:13.5px;}
+  .mry-footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;margin-bottom:32px;}
+  .mry-footer h4{color:#f2eddf;font-size:14.5px;margin-bottom:14px;letter-spacing:1px;}
+  .mry-footer li{padding:5px 0;}
+  .mry-footer a:hover{color:var(--mry-gold);}
+  .mry-footer-brand b{color:#f2eddf;font-size:16px;letter-spacing:2px;display:block;margin-bottom:10px;}
+  .mry-footer-brand p{font-size:13px;line-height:1.8;opacity:.82;}
+  .mry-footer-bottom{
+    border-top:1px solid rgba(255,255,255,.1);padding-top:18px;font-size:12.5px;
+    display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;opacity:.72;
+  }
+
+  /* ===== 弹窗与提示 ===== */
+  .mry-modal-mask{
+    position:fixed;inset:0;background:rgba(20,26,40,.55);backdrop-filter:blur(3px);
+    display:none;place-items:center;z-index:100;padding:20px;
+  }
+  .mry-modal-mask.mry-show{display:grid;}
+  .mry-modal{
+    background:var(--mry-white);border-radius:16px;padding:28px;width:min(460px,100%);
+    box-shadow:0 24px 60px rgba(0,0,0,.3);position:relative;
+  }
+  .mry-modal h3{font-size:18px;margin-bottom:10px;}
+  .mry-modal p{font-size:13.5px;color:var(--mry-ink-soft);}
+  .mry-modal-close{
+    position:absolute;right:14px;top:12px;width:30px;height:30px;border-radius:50%;
+    display:grid;place-items:center;font-size:16px;color:var(--mry-ink-soft);
+  }
+  .mry-modal-close:hover{background:var(--mry-paper-alt);}
+  .mry-modal textarea{
+    width:100%;min-height:100px;border:1px solid var(--mry-line);border-radius:10px;
+    padding:10px 12px;font-family:inherit;font-size:13.5px;resize:vertical;outline:none;
+    background:var(--mry-paper);
+  }
+  .mry-modal textarea:focus{border-color:var(--mry-gold);}
+  .mry-toast{
+    position:fixed;left:50%;bottom:38px;transform:translate(-50%,18px);
+    background:rgba(31,42,68,.95);color:#fdf3dc;font-size:13.5px;padding:11px 22px;
+    border-radius:30px;opacity:0;pointer-events:none;transition:.3s;z-index:120;
+    box-shadow:0 14px 34px rgba(0,0,0,.24);
+  }
+  .mry-toast.mry-show{opacity:1;transform:translate(-50%,0);}
+  .mry-top-btn{
+    position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:50%;
+    background:var(--mry-ink);color:var(--mry-gold);font-size:17px;display:grid;place-items:center;
+    box-shadow:0 12px 28px rgba(31,42,68,.3);z-index:80;opacity:0;pointer-events:none;
+    transition:.3s;border:1px solid rgba(242,181,68,.35);
+  }
+  .mry-top-btn.mry-show{opacity:1;pointer-events:auto;}
+  .mry-top-btn:hover{background:#2c3c5e;transform:translateY(-3px);}
+
+  /* ===== 响应式 ===== */
+  @media (max-width:1020px){
+    .mry-hero-grid{grid-template-columns:1fr;gap:36px;}
+    .mry-about-grid{grid-template-columns:1fr;}
+    .mry-about-side{position:static;}
+    .mry-feature-grid{grid-template-columns:1fr;}
+    .mry-video-grid{grid-template-columns:repeat(2,1fr);}
+    .mry-topic-grid{grid-template-columns:repeat(2,1fr);}
+    .mry-creator-grid{grid-template-columns:repeat(2,1fr);}
+    .mry-story-grid{grid-template-columns:1fr;}
+    .mry-comment-grid{grid-template-columns:repeat(2,1fr);}
+    .mry-dyn-faq{grid-template-columns:1fr;gap:32px;}
+    .mry-contact{grid-template-columns:1fr;}
+    .mry-footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:760px){
+    .mry-nav{
+      position:absolute;left:0;right:0;top:100%;background:var(--mry-paper);
+      border-bottom:1px solid var(--mry-line);flex-direction:column;padding:10px 4vw 16px;
+      display:none;box-shadow:0 18px 28px rgba(31,42,68,.12);
+    }
+    .mry-nav.mry-open{display:flex;}
+    .mry-nav a{padding:10px 12px;}
+    .mry-burger{display:grid;}
+    .mry-header .mry-container{gap:10px;}
+    .mry-search input{width:130px;}
+    .mry-search input:focus{width:150px;}
+    .mry-search-feedback{width:200px;}
+    .mry-hero{padding:36px 0 46px;}
+    .mry-hero-float{display:none;}
+    .mry-video-grid{grid-template-columns:1fr;}
+    .mry-topic-grid{grid-template-columns:1fr 1fr;}
+    .mry-creator-grid{grid-template-columns:1fr;}
+    .mry-comment-grid{grid-template-columns:1fr;}
+    .mry-mini-card{grid-template-columns:100px 1fr;}
+    .mry-contact{padding:26px;}
+    .mry-footer-grid{grid-template-columns:1fr;}
+    .mry-announce-track{gap:34px;animation-duration:20s;}
+  }
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="mry-announce" id="mry-announce">
+  <div class="mry-container">
+    <span class="mry-announce-tag">官方发布</span>
+    <div class="mry-announce-track">
+      <span><b>新增</b>「城市晨昏」系列第 6 集《六点半的菜市场》已上线</span>
+      <span><b>专题</b>「手作与时间」企划开放报名，征集 30 位共创者</span>
+      <span><b>动态</b>创作者手记更新：一个长镜头的 17 次重来</span>
+      <span><b>新增</b>「城市晨昏」系列第 6 集《六点半的菜市场》已上线</span>
+      <span><b>专题</b>「手作与时间」企划开放报名，征集 30 位共创者</span>
+      <span><b>动态</b>创作者手记更新：一个长镜头的 17 次重来</span>
+    </div>
+  </div>
+</div>
+
+<!-- 页头 -->
+<header class="mry-header" id="mry-top">
+  <div class="mry-container">
+    <a class="mry-logo" href="#mry-top" aria-label="孟若羽影像档案首页">
+      <span class="mry-logo-mark">羽</span>
+      <span class="mry-logo-text"><b>孟若羽</b><small>IMAGE ARCHIVE</small></span>
+    </a>
+    <nav class="mry-nav" id="mry-nav">
+      <a href="#mry-top" class="mry-active">首页</a>
+      <a href="#mry-about">影像档案</a>
+      <a href="#mry-focus">焦点作品</a>
+      <a href="#mry-topics">专题企划</a>
+      <a href="#mry-creators">共创者</a>
+      <a href="#mry-dynamics">企业动态</a>
+      <a href="#mry-faq">帮助</a>
+      <a href="#mry-contact">联系</a>
+    </nav>
+    <div class="mry-header-tools">
+      <div class="mry-search">
+        <input type="search" id="mry-search-input" placeholder="搜索作品 / 专题" aria-label="站内搜索">
+        <button type="button" id="mry-search-btn" aria-label="搜索">⌕</button>
+        <div class="mry-search-feedback" id="mry-search-feedback"></div>
+      </div>
+      <button type="button" class="mry-burger" id="mry-burger" aria-label="展开导航" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="mry-hero">
+    <div class="mry-container mry-hero-grid">
+      <div>
+        <span class="mry-eyebrow">独立影像品牌 · 官方网站</span>
+        <h1>孟若羽</h1>
+        <p class="mry-hero-lead">用镜头记录真实生活的褶皱，让每一段平凡的日子被认真看见。</p>
+        <div class="mry-hero-intro">
+          孟若羽影像是持续运营的原创视频品牌官网，深耕城市日常与手作生活影像。我们以企业级的制作标准与社区化的共创机制，搭建一个属于创作者与观众的高品质内容生态。
+        </div>
+        <div class="mry-hero-actions">
+          <a class="mry-btn mry-btn-primary" href="#mry-focus">浏览焦点作品</a>
+          <a class="mry-btn mry-btn-gold" href="#mry-contact">投稿 / 共创报名</a>
+          <a class="mry-btn mry-btn-ghost" href="#mry-about">了解品牌故事</a>
+        </div>
+        <div class="mry-hero-stats">
+          <div><b>186</b><small>部原创影像</small></div>
+          <div><b>42.7万</b><small>社区关注者</small></div>
+          <div><b>9</b><small>年持续创作</small></div>
+        </div>
+      </div>
+      <div class="mry-hero-visual">
+        <div class="mry-hero-frame">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 550'%3E%3Cdefs%3E%3ClinearGradient id='sky' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23c9d8e8'/%3E%3Cstop offset='0.55' stop-color='%23e8dcc6'/%3E%3Cstop offset='1' stop-color='%23d3b98d'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='550' fill='url(%23sky)'/%3E%3Ccircle cx='620' cy='120' r='46' fill='%23f2b544' opacity='0.85'/%3E%3Crect x='0' y='360' width='800' height='190' fill='%234f6f9e' opacity='0.35'/%3E%3Crect x='0' y='420' width='800' height='130' fill='%231f2a44' opacity='0.55'/%3E%3Cg fill='%232c3f61'%3E%3Crect x='70' y='250' width='70' height='170'/%3E%3Crect x='150' y='200' width='54' height='220'/%3E%3Crect x='214' y='290' width='44' height='130'/%3E%3Crect x='600' y='230' width='60' height='190'/%3E%3Crect x='672' y='280' width='48' height='140'/%3E%3C/g%3E%3Cg fill='%23f7e6bd' opacity='0.9'%3E%3Crect x='80' y='270' width='10' height='12'/%3E%3Crect x='100' y='270' width='10' height='12'/%3E%3Crect x='120' y='300' width='10' height='12'/%3E%3Crect x='160' y='230' width='9' height='11'/%3E%3Crect x='180' y='260' width='9' height='11'/%3E%3Crect x='612' y='260' width='10' height='12'/%3E%3Crect x='632' y='300' width='10' height='12'/%3E%3C/g%3E%3Cpath d='M340 550 Q400 400 470 550Z' fill='%23b9a17a' opacity='0.5'/%3E%3Ccircle cx='400' cy='420' r='9' fill='%23fffdf9'/%3E%3C/svg%3E" alt="孟若羽作品《城市晨昏》首屏画面：黄昏中的老城区天际线">
+          <span class="mry-hero-badge"><i></i>主推系列 · 城市晨昏</span>
+        </div>
+        <div class="mry-hero-float">
+          <b>本周更新</b>
+          <span>《六点半的菜市场》<br>时长 12:36 · 4K 高清</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 深度解析 -->
+  <section class="mry-section mry-section-alt" id="mry-about">
+    <div class="mry-container">
+      <div class="mry-section-head">
+        <span class="mry-eyebrow">品牌故事 / 深度解析</span>
+        <h2>关于孟若羽影像档案</h2>
+        <p>从一个手持小相机的大学生活记录者，到一个有稳定团队与成熟方法论的影像品牌，九年间我们只做一件事：把真实的人间细节拍下来。</p>
+      </div>
+      <div class="mry-about-grid">
+        <div class="mry-about-body">
+          <p>孟若羽影像成立于 2017 年，是一家以原创纪实短片为核心的视频品牌。作为孟若羽作品的官方归档与发布入口，官网持续收录品牌自创立以来的全部影像作品、创作手记与幕后资料，同时也承载着社区共创板块的日常运转。我们把“真实”作为方法论而非口号——不摆拍、不煽情，尽量让镜头退后一步，让人物自己走出来。</p>
+          <h3>品牌定位：真实生活的长期记录者</h3>
+          <p>在内容形态上，孟若羽影像坚持“轻设备、长周期、深关系”的三条原则。我们很少追逐热点，更愿意花三个月跟拍一个菜市场摊主、一家开了二十年的裁缝铺，或者一群下班后练习合唱的普通人。这样的创作节奏决定了作品数量不会太多，但每一部都有可被反复查看的细节。官网将这些作品按“系列”和“专题”两种方式归档，方便观众与新读者系统梳理。</p>
+          <p>孟若羽作品的辨识度来自两个方面：一是对自然光的偏爱，绝大多数场景使用现场光完成，宁可保留噪点与手抖，也不打乱真实的气氛；二是对声音的重视，环境音、脚步声、锅铲碰撞声都会被完整保存。我们认为，一部好的生活影像，闭上眼睛听也应该成立。</p>
+          <h3>内容生态：从单向输出到社区共创</h3>
+          <p>2022 年起，官网逐步把“创作”开放给社区。我们上线了专题企划的公开报名机制，任何有兴趣的记录者都可以提交选题大纲，入选后获得设备支持、剪辑指导与联合署名。迄今为止，已有 60 余位共创者参与了「城市晨昏」「手作与时间」「夜班的人」等系列，产出了 31 部联合作品。这些作品不追求统一风格，恰恰因为视角不同而形成了更丰富的内容生态。</p>
+          <p>我们同样重视可复用的创作知识。官方的“创作灵感”栏目定期整理脚本结构、拍摄清单、剪辑思路与字幕规范，所有资料可免费下载。对刚入门的记录者来说，这些并不高深，但足够帮助他们把第一次拍摄完成。</p>
+          <h3>品质与口碑：慢一点，但稳一点</h3>
+          <p>孟若羽影像不追求爆发式增长。我们更愿意把资源投入到后期制作与版权规范上：所有配乐均获得正版授权，所有出镜人物均签署知情同意书，涉及未成年人的内容会额外做隐私处理。这些工作在成片里看不见，却是一家内容企业值得被信赖的基础。</p>
+          <p>九年时间，我们从 1 个人、1 台机器，走到今天 12 人的制作团队与 42.7 万社区关注者。作品曾在多个独立影像展映单元与高校放映活动中与观众见面，也收到过许多普通人的来信：有人说看完《母亲的缝纫机》给家里打了电话，有人说《六点半的菜市场》让他重新认识了自己楼下的早市。这些反馈比任何数据都更能说明我们为什么继续拍下去。</p>
+          <h3>未来方向：行业观察与多元表达</h3>
+          <p>接下来的一年，官网将推出两个新方向：一是“行业观察”系列，用影像记录手作、维修、社区服务等职业的真实工作状态；二是“共创短片季”，以季度为单位开放命题，鼓励更多创作者参与。我们希望孟若羽影像不只是一个作品陈列柜，而是一个持续生长、包容多元视角的内容社区。</p>
+        </div>
+        <aside class="mry-about-side">
+          <h3>档案速览</h3>
+          <ul>
+            <li><span>品牌成立</span><b>2017 年</b></li>
+            <li><span>核心团队</span><b>12 人</b></li>
+            <li><span>原创作品</span><b>186 部</b></li>
+            <li><span>系列企划</span><b>7 个</b></li>
+            <li><span>共创者</span><b>60+ 位</b></li>
+            <li><span>社区关注</span><b>42.7 万</b></li>
+            <li><span>更新频率</span><b>每周 1–2 部</b></li>
+            <li><span>画质标准</span><b>4K / 立体声</b></li>
+          </ul>
+          <p class="mry-side-note">官网所有作品均为原创正版内容，支持非商业引用，转载请注明来源。</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点作品 -->
+  <section class="mry-section" id="mry-focus">
+    <div class="mry-container">
+      <div class="mry-section-head">
+        <span class="mry-eyebrow">焦点内容</span>
+        <h2>本期重点推荐</h2>
+        <p>由编辑部与社区共同选出的六部作品，涵盖城市观察、手作纪实与人物访谈三个方向。</p>
+      </div>
+      <div class="mry-feature-grid">
+        <article class="mry-feature-main">
+          <div class="mry-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23e9dfcc'/%3E%3Crect y='300' width='800' height='150' fill='%23b7a488'/%3E%3Cg fill='%23f2b544'%3E%3Ccircle cx='160' cy='120' r='52'/%3E%3C/g%3E%3Cg fill='%237c5f3c'%3E%3Crect x='60' y='250' width='150' height='90' rx='6'/%3E%3Crect x='230' y='270' width='120' height='70' rx='6'/%3E%3C/g%3E%3Cg fill='%23e8d6b0'%3E%3Ccircle cx='110' cy='238' r='16'/%3E%3Ccircle cx='150' cy='234' r='18'/%3E%3Ccircle cx='188' cy='240' r='14'/%3E%3Ccircle cx='262' cy='258' r='14'/%3E%3Ccircle cx='300' cy='256' r='16'/%3E%3C/g%3E%3Cpath d='M420 450 L520 120 L620 450Z' fill='%234f6f9e' opacity='0.5'/%3E%3Crect x='480' y='300' width='180' height='120' fill='%233c4a68' opacity='0.7'/%3E%3C/svg%3E" alt="孟若羽作品《六点半的菜市场》封面：晨光中的菜摊与竹篮">
+            <span class="mry-cover-tag">城市晨昏 · 第 6 集</span>
+            <span class="mry-cover-play"><span>▶</span></span>
+          </div>
+          <div class="mry-feature-body">
+            <h3>六点半的菜市场</h3>
+            <p>凌晨四点半的批发货车、六点整的第一锅豆浆、七点二十收摊前最后一把青菜。我们用两周时间待在同一个菜市场，拍下它一天中最忙的两个小时，记录摊主们习以为常的手艺与默契。</p>
+            <div class="mry-meta">
+              <span class="mry-author"><span class="mry-avatar" style="background:#c9532b">孟</span>孟若羽</span>
+              <span>2026-11-15 发布</span>
+              <span>时长 12:36</span>
+              <span>4K 高清</span>
+            </div>
+          </div>
+        </article>
+        <div class="mry-feature-side">
+          <article class="mry-mini-card mry-card">
+            <div class="mry-cover">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23223048'/%3E%3Ccircle cx='310' cy='60' r='28' fill='%23f2b544'/%3E%3Cg fill='%23f2f2f2' opacity='0.85'%3E%3Crect x='40' y='120' width='140' height='80' rx='4'/%3E%3Crect x='200' y='100' width='90' height='100' rx='4'/%3E%3C/g%3E%3Cg fill='%23f2b544'%3E%3Crect x='52' y='134' width='26' height='20'/%3E%3Crect x='88' y='134' width='26' height='20'/%3E%3C/g%3E%3C/svg%3E" alt="孟若羽作品《夜班的人》封面：深夜便利店灯光">
+              <span class="mry-cover-play"><span>▶</span></span>
+            </div>
+            <div class="mry-mini-card-body">
+              <h4>夜班的人：凌晨三点的便利店</h4>
+              <small>人物访谈 · 18:02</small>
+            </div>
+          </article>
+          <article class="mry-mini-card mry-card">
+            <div class="mry-cover">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23dcd3c0'/%3E%3Cg stroke='%237c5f3c' stroke-width='6' fill='none'%3E%3Ccircle cx='120' cy='110' r='42'/%3E%3Cpath d='M120 68 L120 40'/%3E%3C/g%3E%3Crect x='200' y='60' width='140' height='110' rx='8' fill='%23b9a17a'/%3E%3Cpath d='M220 90 H320 M220 120 H300' stroke='%237c5f3c' stroke-width='5'/%3E%3C/svg%3E" alt="孟若羽作品《手作与时间》封面：木工房中的刨子与木料">
+              <span class="mry-cover-play"><span>▶</span></span>
+            </div>
+            <div class="mry-mini-card-body">
+              <h4>手作与时间：一张老木凳的修补</h4>
+              <small>手作纪实 · 14:48</small>
+            </div>
+          </article>
+          <article class="mry-mini-card mry-card">
+            <div class="mry-cover">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%234f6f9e'/%3E%3Cpath d='M0 170 Q100 120 200 170 T400 170 V225 H0Z' fill='%232c3f61'/%3E%3Ccircle cx='90' cy='70' r='34' fill='%23f7e6bd'/%3E%3Cg fill='%23f7e6bd' opacity='0.6'%3E%3Crect x='240' y='90' width='8' height='40'/%3E%3Crect x='270' y='70' width='8' height='60'/%3E%3Crect x='300' y='95' width='8' height='35'/%3E%3C/g%3E%3C/svg%3E" alt="孟若羽作品《江边散步的人》封面：傍晚江岸与行人剪影">
+              <span class="mry-cover-play"><span>▶</span></span>
+            </div>
+            <div class="mry-mini-card-body">
+              <h4>江边散步的人</h4>
+              <small>日常记录 · 09:15</small>
+            </div>
+          </article>
+          <article class="mry-mini-card mry-card">
+            <div class="mry-cover">
+              <img src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 225%22%3E%3Crect width=%22400%22 height=%22225%22 fill=%22%23f0e6d2%22/%3E%3Cg fill=%22%23c9532b%22%3E%3Ccircle cx=%22100%22 cy=%22100%22 r=%2230%22/%3E%3Ccircle cx=%22280%22 cy=%2280%22 r=%2222%22/%3E%3C/g%3E%3Cg fill=%22%233c4a68%22%3E%3Crect x=%2240%22 y=%22150%22 width=%22320%22 height=%2212%22 rx=%226%22/%3E%3Crect x=%2290%22 y=%22110%22 width=%2214%22 height=%2240%22/%3E%3Crect x=%22290%22 y=%22110%22 width=%2214%22 height=%2240%22/%3E%3C/g%3E%3C/svg%3E' alt="孟若羽作品《母亲的缝纫机》封面：老式缝纫机与线轴">
+              <span class="mry-cover-play"><span>▶</span></span>
+            </div>
+            <div class="mry-mini-card-body">
+              <h4>母亲的缝纫机</h4>
+              <small>情感故事 · 21:40</small>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门视频流 -->
+  <section class="mry-section mry-section-alt" id="mry-videos">
+    <div class="mry-container">
+      <div class="mry-section-head">
+        <span class="mry-eyebrow">精品内容 · 持续更新</span>
+        <h2>近期作品</h2>
+        <p>每周更新一到两部原创短片。以下作品按发布顺序排列，均可查看创作手记与拍摄清单。</p>
+      </div>
+      <div class="mry-video-grid">
+
+        <article class="mry-card">
+          <div class="mry-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23dfe7ee'/%3E%3Cpath d='M0 160 Q120 90 240 160 T400 150 V225 H0Z' fill='%237c9bb8'/%3E%3Cg fill='%233c4a68'%3E%3Crect x='60' y='120' width='90' height='60'/%3E%3Crect x='180' y='100' width='60' height='80'/%3E%3C/g%3E%3Ccircle cx='320' cy='58' r='26' fill='%23f2b544'/%3E%3C/svg%3E" alt="孟若羽作品《周末去修表》封面：老街修表铺与玻璃柜台">
+            <span class="mry-cover-tag">行业观察</span>
+            <span class="mry-cover-play"><span>▶</span></span>
+          </div>
+          <div class="mry-card-body">
+            <h3>周末去修表</h3>
+            <p>一间两平米的修表铺，一位守了三十年的师傅，和三十块等待被唤醒的旧表。</p>
+            <div class="mry-tags"><span>手作</span><span>城市探索</span><span>人物</span></div>
+            <div class="mry-card-actions">
+              <button type="button" class="mry-act" data-like>♡ <b>1.2万</b></button>
+              <button type="button" class="mry-act" data-save>☆ 收藏</button>
+              <button type="button" class="mry-act" data-share>分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="mry-card">
+          <div class="mry-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23f3e3cb'/%3E%3Crect y='150' width='400' height='75' fill='%23b9a17a'/%3E%3Cg fill='%23fffdf9'%3E%3Crect x='80' y='60' width='120' height='90' rx='8'/%3E%3C/g%3E%3Cg stroke='%23c9532b' stroke-width='4' fill='none'%3E%3Ccircle cx='120' cy='105' r='20'/%3E%3Cpath d='M250 150 Q280 90 320 150'/%3E%3C/g%3E%3C/svg%3E" alt="孟若羽作品《一碗面的时间》封面：厨房灶台与手擀面">
+            <span class="mry-cover-tag">美食烹饪</span>
+            <span class="mry-cover-play"><span>▶</span></span>
+          </div>
+          <div class="mry-card-body">
+            <h3>一碗面的时间</h3>
+            <p>从和面到出锅需要四十分钟，我们把这三十分钟的等待也拍了下来。</p>
+            <div class="mry-tags"><span>美食</span><span>日常记录</span><span>治愈</span></div>
+            <div class="mry-card-actions">
+              <button type="button" class="mry-act" data-like>♡ <b>9860</b></button>
+              <button type="button" class="mry-act" data-save>☆ 收藏</button>
+              <button type="button" class="mry-act" data-share>分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="mry-card">
+          <div class="mry-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23223048'/%3E%3Cg fill='%23f2b544' opacity='0.85'%3E%3Ccircle cx='90' cy='70' r='16'/%3E%3Ccircle cx='130' cy='110' r='10'/%3E%3Ccircle cx='300' cy='90' r='12'/%3E%3C/g%3E%3Crect y='150' width='400' height='75' fill='%233c4a68'/%3E%3Cpath d='M40 150 L120 80 L200 150Z' fill='%234f6f9e' opacity='0.6'/%3E%3C/svg%3E" alt="孟若羽作品《夜行的灯》封面：夜晚城市灯光与天台">
+            <span class="mry-cover-tag">治愈影像</span>
+            <span class="mry-cover-play"><span>▶</span></span>
+          </div>
+          <div class="mry-card-body">
+            <h3>夜行的灯</h3>
+            <p>凌晨一点到四点，城市只剩下路灯、便利店与还在赶路的人。</p>
+            <div class="mry-tags"><span>城市</span><span>夜景</span><span>情绪</span></div>
+            <div class="mry-card-actions">
+              <button type="button" class="mry-act" data-like>♡ <b>1.5万</b></button>
+              <button type="button" class="mry-act" data-save>☆ 收藏</button>
+              <button type="button" class="mry-act" data-share>分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="mry-card">
+          <div class="mry-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23e6ebdd'/%3E%3Cg fill='%235d7a52'%3E%3Cpath d='M60 225 Q80 120 110 225Z'/%3E%3Cpath d='M150 225 Q170 90 200 225Z'/%3E%3Cpath d='M250 225 Q270 130 300 225Z'/%3E%3C/g%3E%3Ccircle cx='330' cy='60' r='30' fill='%23f2b544'/%3E%3Crect y='190' width='400' height='35' fill='%23a08a62'/%3E%3C/svg%3E" alt="孟若羽作品《阳台上的春天》封面：阳台绿植与晨光">
+            <span class="mry-cover-tag">生活方式</span>
+            <span class="mry-cover-play"><span>▶</span></span>
+          </div>
+          <div class="mry-card-body">
+            <h3>阳台上的春天</h3>
+            <p>一位退休阿姨在六平米阳台上种了四十三种植物，她记得每一盆的脾气。</p>
+            <div class="mry-tags"><span>植物</span><span>治愈</span><span>访谈</span></div>
+            <div class="mry-card-actions">
+              <button type="button" class="mry-act" data-like>♡ <b>7420</b></button>
+              <button type="button" class="mry-act" data-save>☆ 收藏</button>
+              <button type="button" class="mry-act" data-share>分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="mry-card">
+          <div class="mry-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23d8cfc2'/%3E%3Cg fill='%237c5f3c'%3E%3Crect x='50' y='100' width='120' height='90' rx='6'/%3E%3Crect x='190' y='80' width='80' height='110' rx='6'/%3E%3C/g%3E%3Cg fill='%23f2b544'%3E%3Ccircle cx='300' cy='120' r='20'/%3E%3Ccircle cx='340' cy='150' r='14'/%3E%3C/g%3E%3Cg stroke='%233c4a68' stroke-width='3'%3E%3Cpath d='M60 120 H160 M60 140 H140'/%3E%3C/g%3E%3C/svg%3E" alt="孟若羽作品《旧书修复师》封面：工作台上的旧书与工具">
+            <span class="mry-cover-tag">手作纪实</span>
+            <span class="mry-cover-play"><span>▶</span></span>
+          </div>
+          <div class="mry-card-body">
+            <h3>旧书修复师</h3>
+            <p>虫蛀、水渍、脱页，一本旧书要经过十几道工序才能重新被翻开。</p>
+            <div class="mry-tags"><span>手作</span><span>匠心</span><span>文化</span></div>
+            <div class="mry-card-actions">
+              <button type="button" class="mry-act" data-like>♡ <b>6120</b></button>
+              <button type="button" class="mry-act" data-save>☆ 收藏</button>
+              <button type="button" class="mry-act" data-share>分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="mry-card">
+          <div class="mry-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23cfdae6'/%3E%3Crect y='130' width='400' height='95' fill='%234f6f9e' opacity='0.55'/%3E%3Cg fill='%232c3f61'%3E%3Crect x='60' y='80' width='80' height='130'/%3E%3Crect x='170' y='50' width='50' height='160'/%3E%3Crect x='250' y='95' width='70' height='115'/%3E%3C/g%3E%3Ccircle cx='330' cy='55' r='22' fill='%23f7e6bd'/%3E%3C/svg%3E" alt="孟若羽作品《老巷巡礼》封面：老巷建筑与石板路">
+            <span class="mry-cover-tag">在地文化</span>
+            <span class="mry-cover-play"><span>▶</span></span>
+          </div>
+          <div class="mry-card-body">
+            <h3>老巷巡礼</h3>
+            <p>跟着一位住了六十四年的老人，走完一条即将改造的老巷子。</p>
+            <div class="mry-tags"><span>城市探索</span><span>文化</span><span>纪录</span></div>
+            <div class="mry-card-actions">
+              <button type="button" class="mry-act" data-like>♡ <b>8800</b></button>
+              <button type="button" class="mry-act" data-save>☆ 收藏</button>
+              <button type="button" class="mry-act" data-share>分享</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题企划 -->
+  <section class="mry-section" id="mry-topics">
+    <div class="mry-container">
+      <div class="mry-section-head">
+        <span class="mry-eyebrow">专题 / 企划</span>
+        <h2>长期企划与共创专题</h2>
+        <p>每个专题通常持续三到六个月，开放报名与联合创作，欢迎不同背景的记录者加入。</p>
+      </div>
+      <div class="mry-topic-grid">
+        <article class="mry-topic">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 530'%3E%3Crect width='400' height='530' fill='%23223048'/%3E%3Ccircle cx='300' cy='100' r='50' fill='%23f2b544' opacity='0.85'/%3E%3Crect y='330' width='400' height='200' fill='%233c4a68'/%3E%3Cg fill='%231f2a44'%3E%3Crect x='50' y='260' width='70' height='120'/%3E%3Crect x='140' y='220' width='50' height='160'/%3E%3Crect x='250' y='280' width='60' height='100'/%3E%3C/g%3E%3Cg fill='%23f7e6bd' opacity='0.85'%3E%3Crect x='60' y='280' width='9' height='10'/%3E%3Crect x='80' y='280' width='9' height='10'/%3E%3Crect x='150' y='240' width='8' height='9'/%3E%3Crect x='262' y='300' width='9' height='10'/%3E%3C/g%3E%3C/svg%3E" alt="专题《城市晨昏》封面：城市天际线与黄昏天空">
+          <small>更新至第 6 集</small>
+          <h3>城市晨昏</h3>
+          <p>记录一座城市从清晨到深夜的时间切片，已发布 6 集，第 7 集拍摄中。</p>
+        </article>
+        <article class="mry-topic">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 530'%3E%3Crect width='400' height='530' fill='%23e6d9bf'/%3E%3Cg stroke='%237c5f3c' stroke-width='8' fill='none'%3E%3Ccircle cx='200' cy='200' r='90'/%3E%3Cpath d='M200 110 V60 M200 290 V340 M110 200 H60 M290 200 H340'/%3E%3C/g%3E%3Crect y='400' width='400' height='130' fill='%23b9a17a'/%3E%3C/svg%3E" alt="专题《手作与时间》封面：木质工作台与手作工具">
+          <small>报名中 · 剩余 12 席</small>
+          <h3>手作与时间</h3>
+          <p>面向手作、修理、传统手艺从业者与记录者，征集 30 位共创者。</p>
+        </article>
+        <article class="mry-topic">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 530'%3E%3Crect width='400' height='530' fill='%23cfdae6'/%3E%3Crect y='330' width='400' height='200' fill='%234f6f9e' opacity='0.7'/%3E%3Cg fill='%232c3f61'%3E%3Crect x='70' y='200' width='60' height='130'/%3E%3Crect x='160' y='160' width='44' height='170'/%3E%3Crect x='240' y='230' width='70' height='100'/%3E%3C/g%3E%3Cg fill='%23f7e6bd'%3E%3Ccircle cx='100' cy='230' r='7'/%3E%3Ccircle cx='182' cy='190' r='7'/%3E%3Ccircle cx='275' cy='260' r='7'/%3E%3C/g%3E%3C/svg%3E" alt="专题《夜班的人》封面：夜晚街道与工作灯光">
+          <small>已完结 · 共 5 集</small>
+          <h3>夜班的人</h3>
+          <p>便利店店员、急诊护士、夜班司机，五个关于夜晚与坚持的故事。</p>
+        </article>
+        <article class="mry-topic">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 530'%3E%3Crect width='400' height='530' fill='%23e9dfcc'/%3E%3Cg fill='%235d7a52' opacity='0.9'%3E%3Cpath d='M80 430 Q100 240 130 430Z'/%3E%3Cpath d='M180 430 Q200 200 230 430Z'/%3E%3Cpath d='M280 430 Q300 260 330 430Z'/%3E%3C/g%3E%3Crect y='430' width='400' height='100' fill='%23a08a62'/%3E%3Ccircle cx='320' cy='90' r='36' fill='%23f2b544'/%3E%3C/svg%3E" alt="专题《阳台计划》封面：阳台绿植与阳光">
+          <small>长期征集中</small>
+          <h3>阳台计划</h3>
+          <p>把镜头对准自家阳台、窗台与楼道，记录普通人的微型自然。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 共创者 -->
+  <section class="mry-section mry-section-alt" id="mry-creators">
+    <div class="mry-container">
+      <div class="mry-section-head">
+        <span class="mry-eyebrow">创作者 · 共创者</span>
+        <h2>一起记录的人</h2>
+        <p>孟若羽影像的共创者来自不同职业，他们带来的视角让内容生态更开阔。</p>
+      </div>
+      <div class="mry-creator-grid">
+        <article class="mry-creator">
+          <span class="mry-avatar" style="background:#c9532b">孟</span>
+          <h3>孟若羽</h3>
+          <span class="mry-domain">城市观察 · 纪实</span>
+          <p>品牌主理人，偏爱自然光与长镜头，相信等待是记录的一部分。</p>
+          <div class="mry-creator-stats">
+            <span><b>72</b>作品</span>
+            <span><b>18.6万</b>关注</span>
+          </div>
+        </article>
+        <article class="mry-creator">
+          <span class="mry-avatar" style="background:#4f6f9e">林</span>
+          <h3>林向晚</h3>
+          <span class="mry-domain">手作 · 声音设计</span>
+          <p>独立声音设计师，负责专题作品的环境声采集与后期混音。</p>
+          <div class="mry-creator-stats">
+            <span><b>24</b>作品</span>
+            <span><b>5.2万</b>关注</span>
+          </div>
+        </article>
+        <article class="mry-creator">
+          <span class="mry-avatar" style="background:#5d7a52">周</span>
+          <h3>周明川</h3>
+          <span class="mry-domain">行业观察 · 访谈</span>
+          <p>前媒体人，擅长把复杂的职业故事讲得平实清楚，访谈提纲常写到深夜。</p>
+          <div class="mry-creator-stats">
+            <span><b>31</b>作品</span>
+            <span><b>6.8万</b>关注</span>
+          </div>
+        </article>
+        <article class="mry-creator">
+          <span class="mry-avatar" style="background:#b0812f">苏</span>
+          <h3>苏阿禾</h3>
+          <span class="mry-domain">美食 · 日常</span>
+          <p>烹饪爱好者，拍厨房也拍菜市场，认为一顿饭的准备工作同样值得记录。</p>
+          <div class="mry-creator-stats">
+            <span><b>18</b>作品</span>
+            <span><b>4.1万</b>关注</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 故事随笔 -->
+  <section class="mry-section" id="mry-stories">
+    <div class="mry-container">
+      <div class="mry-section-head">
+        <span class="mry-eyebrow">故事随笔</span>
+        <h2>镜头之外的文字</h2>
+        <p>一些没能放进片子里的细节，与拍摄过程中真正让我们停下脚步的瞬间。</p>
+      </div>
+      <div class="mry-story-grid">
+        <article class="mry-story">
+          <h3>等一锅豆浆烧开</h3>
+          <p>菜市场那家豆浆摊的老板说，火候到了自然就开了，急不得。我们架好机器，看着锅里的白雾慢慢升起来，那一刻忽然明白，拍了这么多生活，其实拍的都是等待。</p>
+          <span class="mry-story-by">—— 孟若羽，拍摄于 11 月 12 日清晨</span>
+        </article>
+        <article class="mry-story">
+          <h3>修表师傅的抽屉</h3>
+          <p>他拉开抽屉给我们看，里面整整齐齐放着几十个透明小袋，装着客人留下的旧表零件。他说每一袋都记得是谁的。三十年了，有人再也没回来取。</p>
+          <span class="mry-story-by">—— 周明川，访谈笔记</span>
+        </article>
+        <article class="mry-story">
+          <h3>阳台上的第四十三盆</h3>
+          <p>阿姨数到第四十三盆时停了一下，说这盆是上个月刚救回来的，差点没活。她把手掌摊开给我们看，指缝里都是土。镜头关掉之后她又浇了一遍水。</p>
+          <span class="mry-story-by">—— 苏阿禾，拍摄后记</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户评价 -->
+  <section class="mry-section mry-section-alt" id="mry-reviews">
+    <div class="mry-container">
+      <div class="mry-section-head">
+        <span class="mry-eyebrow">社区口碑</span>
+        <h2>来自观众的留言</h2>
+        <p>这些留言来自官网留言区与作品讨论区，未经修饰。</p>
+      </div>
+      <div class="mry-comment-grid">
+        <div class="mry-comment">
+          <span class="mry-avatar" style="background:#4f6f9e">阿</span>
+          <div class="mry-comment-body">
+            <h4>阿橘</h4>
+            <p>《六点半的菜市场》看了两遍。第二遍是关掉画面的，光听声音就觉得自己站在摊位旁边。这种真实感很难得。</p>
+            <small>11 月 16 日 · 来自作品讨论区</small>
+          </div>
+        </div>
+        <div class="mry-comment">
+          <span class="mry-avatar" style="background:#5d7a52">木</span>
+          <div class="mry-comment-body">
+            <h4>木子阿姨</h4>
+            <p>我是被女儿推荐来的，本来以为看不懂年轻人的片子。结果《母亲的缝纫机》让我哭了好一会儿，太像我妈了。</p>
+            <small>11 月 13 日 · 来自官网留言</small>
+          </div>
+        </div>
+        <div class="mry-comment">
+          <span class="mry-avatar" style="background:#b0812f">三</span>
+          <div class="mry-comment-body">
+            <h4>三十七度</h4>
+            <p>投稿流程比想象中清晰，官方给的拍摄清单很实用，第一次交片就被选中做了联合署名，挺受鼓励的。</p>
+            <small>11 月 10 日 · 来自共创者反馈</small>
+          </div>
+        </div>
+        <div class="mry-comment">
+          <span class="mry-avatar" style="background:#c9532b">周</span>
+          <div class="mry-comment-body">
+            <h4>周舟</h4>
+            <p>制作上的水准很稳定，4K 高清加上环境声的处理，让每部短片都有电影感。这是我愿意持续关注的理由。</p>
+            <small>11 月 8 日 · 来自作品讨论区</small>
+          </div>
+        </div>
+        <div class="mry-comment">
+          <span class="mry-avatar" style="background:#7c5f3c">老</span>
+          <div class="mry-comment-body">
+            <h4>老陈</h4>
+            <p>修表铺那集我是店里的常客，看完才知道原来自己的表在他手里被那么认真地对待。谢谢你们拍下来。</p>
+            <small>11 月 5 日 · 来自官网留言</small>
+          </div>
+        </div>
+        <div class="mry-comment">
+          <span class="mry-avatar" style="background:#3c4a68">小</span>
+          <div class="mry-comment-body">
+            <h4>小满</h4>
+            <p>从大学看到工作，感觉这个品牌一直在慢慢长。没有跟风，也不着急，这种节奏现在很少见了。</p>
+            <small>11 月 2 日 · 来自社区关注者</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 企业动态 + FAQ -->
+  <section class="mry-section" id="mry-dynamics">
+    <div class="mry-container">
+      <div class="mry-section-head">
+        <span class="mry-eyebrow">企业动态 · 帮助中心</span>
+        <h2>官方发布与常见问题</h2>
+        <p>品牌最新动态、企划进度与共创相关说明，均在此处同步更新。</p>
+      </div>
+      <div class="mry-dyn-faq">
+        <div>
+          <ul class="mry-timeline">
+            <li>
+              <time>2026-11-15</time>
+              <h4>「城市晨昏」第 6 集正式发布</h4>
+              <p>本集聚焦清晨菜市场，时长 12 分 36 秒，同步上线创作手记与拍摄清单下载。</p>
+            </li>
+            <li>
+              <time>2026-11-08</time>
+              <h4>「手作与时间」共创招募启动</h4>
+              <p>面向手作、修理与传统手艺从业者，计划征集 30 位共创者，报名截止 12 月 20 日。</p>
+            </li>
+            <li>
+              <time>2026-10-30</time>
+              <h4>官网档案页升级</h4>
+              <p>作品页新增“系列归档”与“幕后资料”两个模块，检索体验进一步优化。</p>
+            </li>
+            <li>
+              <time>2026-10-18</time>
+              <h4>秋季社区放映活动结束</h4>
+              <p>共举办 4 场线下放映，累计到场观众 320 余人，现场问答整理已上线。</p>
+            </li>
+            <li>
+              <time>2026-10-02</time>
+              <h4>年度创作基金开放申请</h4>
+              <p>面向社区共创者提供制作支持，本期支持 6 个选题，结果将于 12 月公布。</p>
+            </li>
+          </ul>
+        </div>
+        <div class="mry-faq" id="mry-faq">
+          <details open>
+            <summary>孟若羽影像的作品在哪里可以看到？</summary>
+            <p>全部原创作品统一归档在官网的“影像档案”与“焦点作品”板块，按系列与专题分类呈现，方便系统浏览。</p>
+          </details>
+          <details>
+            <summary>如何参与专题企划的共创？</summary>
+            <p>在“联系 / 投稿”入口提交选题大纲、时长规划与拍摄计划即可。编辑部会在 7 个工作日内回复，入选后将获得设备支持与剪辑指导。</p>
+          </details>
+          <details>
+            <summary>官网的作品是否可以转载或引用？</summary>
+            <p>欢迎非商业用途的引用与展映，请注明“来源：孟若羽影像官方网站”并保持内容完整。商业用途请通过官方邮箱联系我们获取授权。</p>
+          </details>
+          <details>
+            <summary>更新时间是怎样的？</summary>
+            <p>常规状态下每周更新一到两部作品，重大专题期间会根据拍摄进度调整，具体以公告条与企业动态为准。</p>
+          </details>
+          <details>
+            <summary>拍摄中如何保护出镜者的隐私？</summary>
+            <p>所有出镜人物均签署知情同意书，涉及未成年人或敏感场景会做面部模糊与声音变调处理，这是品牌一贯坚持的规范。</p>
+          </details>
+          <details>
+            <summary>投稿必须使用专业设备吗？</summary>
+            <p>不需要。我们更看重选题视角与观察深度，手机拍摄的短纪录片同样可以参与，官网的创作灵感栏目提供了入门清单。</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 合作与联系 -->
+  <section class="mry-section mry-section-alt" id="mry-contact">
+    <div class="mry-container">
+      <div class="mry-section-head">
+        <span class="mry-eyebrow">合作 · 投稿 · 联系</span>
+        <h2>与孟若羽影像一起做点事</h2>
+        <p>无论是品牌合作、机构展映，还是个人选题投稿，都欢迎从这里开始。</p>
+      </div>
+      <div class="mry-partner-row">
+        <div class="mry-partner"><i></i>城市影像展映计划</div>
+        <div class="mry-partner"><i></i>本地手作工坊联盟</div>
+        <div class="mry-partner"><i></i>社区文化中心</div>
+        <div class="mry-partner"><i></i>高校影视社团</div>
+        <div class="mry-partner"><i></i>独立音乐厂牌</div>
+      </div>
+      <div class="mry-contact">
+        <div>
+          <h2>官方联系渠道</h2>
+          <p>我们保持小团队的高效沟通，所有邮件都会在三个工作日内由专人回复。</p>
+          <ul class="mry-contact-list">
+            <li><b>品牌合作</b> partner@mengruoyu-image.com</li>
+            <li><b>共创投稿</b> submit@mengruoyu-image.com</li>
+            <li><b>媒体联络</b> press@mengruoyu-image.com</li>
+            <li><b>工作时间</b> 周一至周五 10:00–19:00</li>
+          </ul>
+        </div>
+        <div class="mry-contact-actions">
+          <button type="button" class="mry-btn mry-btn-gold" data-open="submit">提交投稿意向</button>
+          <button type="button" class="mry-btn mry-btn-ghost" data-open="report">反馈与建议</button>
+          <button type="button" class="mry-btn mry-btn-ghost" data-copy>复制品牌联络方式</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 页脚 -->
+<footer class="mry-footer">
+  <div class="mry-container">
+    <div class="mry-footer-grid">
+      <div class="mry-footer-brand">
+        <b>孟若羽影像</b>
+        <p>孟若羽官方网站 · 原创纪实影像品牌<br>持续运营，专注真实生活的长期记录。<br>所有作品均为原创正版内容。</p>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <ul>
+          <li><a href="#mry-focus">焦点作品</a></li>
+          <li><a href="#mry-videos">近期作品</a></li>
+          <li><a href="#mry-topics">专题企划</a></li>
+          <li><a href="#mry-stories">故事随笔</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>品牌</h4>
+        <ul>
+          <li><a href="#mry-about">品牌故事</a></li>
+          <li><a href="#mry-creators">共创者</a></li>
+          <li><a href="#mry-dynamics">企业动态</a></li>
+          <li><a href="#mry-faq">帮助中心</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联络</h4>
+        <ul>
+          <li><a href="#mry-contact">合作与投稿</a></li>
+          <li><a href="#mry-reviews">社区口碑</a></li>
+          <li><a href="#mry-top">回到首页</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mry-footer-bottom">
+      <span>© 2017–2026 孟若羽影像 官方网站 · 版权所有</span>
+      <span>持续运营中 · 原创正版 · 高清制作</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 通用弹窗 -->
+<div class="mry-modal-mask" id="mry-modal-mask">
+  <div class="mry-modal">
+    <button type="button" class="mry-modal-close" id="mry-modal-close" aria-label="关闭">✕</button>
+    <h3 id="mry-modal-title">提示</h3>
+    <p id="mry-modal-text"></p>
+    <div id="mry-modal-form" style="margin-top:14px;display:none;">
+      <textarea placeholder="简单写下你的选题或建议，我们会尽快回复。"></textarea>
+      <button type="button" class="mry-btn mry-btn-primary" id="mry-modal-submit" style="margin-top:12px;">发送</button>
+    </div>
+  </div>
+</div>
+
+<div class="mry-toast" id="mry-toast"></div>
+<button type="button" class="mry-top-btn" id="mry-top-btn" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 移动端导航 */
+  var burger = document.getElementById("mry-burger");
+  var nav = document.getElementById("mry-nav");
+  if (burger && nav) {
+    burger.addEventListener("click", function(){
+      var open = nav.classList.toggle("mry-open");
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    nav.querySelectorAll("a").forEach(function(a){
+      a.addEventListener("click", function(){
+        nav.classList.remove("mry-open");
+        burger.setAttribute("aria-expanded","false");
+      });
+    });
+  }
+
+  /* Toast */
+  var toast = document.getElementById("mry-toast");
+  var toastTimer = null;
+  function showToast(msg){
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add("mry-show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove("mry-show"); }, 2200);
+  }
+
+  /* 搜索反馈 */
+  var searchInput = document.getElementById("mry-search-input");
+  var searchBtn = document.getElementById("mry-search-btn");
+  var searchFeedback = document.getElementById("mry-search-feedback");
+  var searchMap = [
+    { key: "菜市场", tip: "找到 1 部作品：《六点半的菜市场》" },
+    { key: "手作", tip: "找到 2 个内容：「手作与时间」专题、《旧书修复师》" },
+    { key: "夜", tip: "找到 2 个内容：《夜班的人》《夜行的灯》" },
+    { key: "访谈", tip: "找到 1 个内容：《夜班的人：凌晨三点的便利店》" },
+    { key: "孟若羽", tip: "与品牌主理人相关的 12 个作品与 3 篇手记" }
+  ];
+  function doSearch(){
+    if (!searchInput || !searchFeedback) return;
+    var q = searchInput.value.trim();
+    if (!q) {
+      searchFeedback.textContent = "试试搜索「菜市场」「手作」「夜」或「访谈」。";
+      searchFeedback.classList.add("mry-show");
+      return;
+    }
+    var hit = searchMap.filter(function(item){ return item.key.indexOf(q) > -1 || q.indexOf(item.key) > -1; })[0];
+    if (hit) {
+      searchFeedback.textContent = hit.tip;
+    } else {
+      searchFeedback.textContent = "暂未找到与「" + q + "」直接匹配的内容，可浏览焦点作品或专题企划。";
+    }
+    searchFeedback.classList.add("mry-show");
+  }
+  if (searchBtn) searchBtn.addEventListener("click", doSearch);
+  if (searchInput) {
+    searchInput.addEventListener("keydown", function(e){
+      if (e.key === "Enter") { e.preventDefault(); doSearch(); }
+    });
+  }
+  document.addEventListener("click", function(e){
+    if (searchFeedback && !e.target.closest(".mry-search")) {
+      searchFeedback.classList.remove("mry-show");
+    }
+  });
+
+  /* 点赞与收藏 */
+  document.querySelectorAll("[data-like]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var numEl = btn.querySelector("b");
+      var liked = btn.classList.toggle("mry-liked");
+      var raw = numEl ? numEl.textContent : "0";
+      var m = raw.match(/^([\d.]+)(万?)$/);
+      if (m) {
+        var n = parseFloat(m[1]);
+        var isWan = m[2] === "万";
+        if (isWan) {
+          n = +(n + (liked ? 0.1 : -0.1)).toFixed(1);
+          if (n < 0) n = 0;
+          numEl.textContent = n + "万";
+        } else {
+          n = Math.max(0, n + (liked ? 1 : -1));
+          numEl.textContent = n;
+        }
+      }
+      btn.firstChild.textContent = liked ? "♥ " : "♡ ";
+      showToast(liked ? "已点赞，谢谢支持" : "已取消点赞");
+    });
+  });
+
+  document.querySelectorAll("[data-save]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var saved = btn.classList.toggle("mry-saved");
+      btn.textContent = saved ? "★ 已收藏" : "☆ 收藏";
+      showToast(saved ? "已加入收藏夹" : "已取消收藏");
+    });
+  });
+
+  /* 分享 */
+  document.querySelectorAll("[data-share]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var card = btn.closest(".mry-card");
+      var title = card ? card.querySelector("h3").textContent : "孟若羽作品";
+      var shareText = "《" + title + "》—— 来自孟若羽影像官方网站";
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(shareText).then(function(){
+          showToast("分享文案已复制，可发送给朋友");
+        }).catch(function(){
+          showToast("可分享：微信 / 微博 / QQ");
+        });
+      } else {
+        showToast("可分享：微信 / 微博 / QQ");
+      }
+    });
+  });
+
+  /* 复制联络方式 */
+  var copyBtn = document.querySelector("[data-copy]");
+  if (copyBtn) {
+    copyBtn.addEventListener("click", function(){
+      var text = "孟若羽影像官方网站 · submit@mengruoyu-image.com";
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function(){
+          showToast("联络方式已复制");
+        }).catch(function(){
+          showToast("联络方式：submit@mengruoyu-image.com");
+        });
+      } else {
+        showToast("联络方式：submit@mengruoyu-image.com");
+      }
+    });
+  }
+
+  /* 弹窗 */
+  var mask = document.getElementById("mry-modal-mask");
+  var modalTitle = document.getElementById("mry-modal-title");
+  var modalText = document.getElementById("mry-modal-text");
+  var modalForm = document.getElementById("mry-modal-form");
+  var modalClose = document.getElementById("mry-modal-close");
+  var modalSubmit = document.getElementById("mry-modal-submit");
+
+  function openModal(type){
+    if (!mask) return;
+    if (type === "submit") {
+      modalTitle.textContent = "投稿意向";
+      modalText.textContent = "请简单描述你的选题、拍摄计划与大致时长，编辑部会在 7 个工作日内回复。";
+      modalForm.style.display = "block";
+    } else {
+      modalTitle.textContent = "反馈与建议";
+      modalText.textContent = "遇到播放问题、内容建议或合作疑问，都可以在这里告诉我们。";
+      modalForm.style.display = "block";
+    }
+    mask.classList.add("mry-show");
+  }
+  document.querySelectorAll("[data-open]").forEach(function(btn){
+    btn.addEventListener("click", function(){ openModal(btn.getAttribute("data-open")); });
+  });
+  if (modalClose) {
+    modalClose.addEventListener("click", function(){ mask.classList.remove("mry-show"); });
+  }
+  if (mask) {
+    mask.addEventListener("click", function(e){
+      if (e.target === mask) mask.classList.remove("mry-show");
+    });
+  }
+  if (modalSubmit) {
+    modalSubmit.addEventListener("click", function(){
+      var ta = modalForm.querySelector("textarea");
+      if (ta && ta.value.trim().length < 5) {
+        showToast("请再多写几个字");
+        return;
+      }
+      modalForm.style.display = "none";
+      mask.classList.remove("mry-show");
+      if (ta) ta.value = "";
+      showToast("已收到，我们会尽快联系你");
+    });
+  }
+
+  /* 回到顶部 */
+  var topBtn = document.getElementById("mry-top-btn");
+  window.addEventListener("scroll", function(){
+    if (!topBtn) return;
+    if (window.scrollY > 620) topBtn.classList.add("mry-show");
+    else topBtn.classList.remove("mry-show");
+  }, { passive: true });
+  if (topBtn) {
+    topBtn.addEventListener("click", function(){
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  /* 导航高亮 */
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll(".mry-nav a"));
+  var sections = navLinks.map(function(a){
+    var id = a.getAttribute("href");
+    return id && id.length > 1 ? document.querySelector(id) : null;
+  });
+  window.addEventListener("scroll", function(){
+    var pos = window.scrollY + 180;
+    var current = 0;
+    sections.forEach(function(sec, i){
+      if (sec && sec.offsetTop <= pos) current = i;
+    });
+    navLinks.forEach(function(a, i){
+      a.classList.toggle("mry-active", i === current);
+    });
+  }, { passive: true });
+
+})();
+</script>
+</body>
+  </html>
